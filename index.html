@@ -1,144 +1,127 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morning Light Solutions | Professional IT Services</title>
+    <title>Morning Light Solutions | High Desert IT Support</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <header class="bg-blue-900 text-white text-center py-12 px-4 border-b border-blue-800">
-        <div class="max-w-3xl mx-auto space-y-4">
-            <h1 class="text-4xl font-extrabold tracking-tight">Our Professional Services</h1>
-            <div class="bg-blue-800/60 border border-blue-700 rounded-xl p-4 text-sm inline-block text-blue-100 max-w-xl mx-auto">
-                <span class="font-semibold text-yellow-300">Limited-Time Special:</span> "Sign up for a 12-month Managed Plan before March 2026 and get the <span class="italic">Onboarding Fee waived</span> (a $500–$1,500 value) and your first month at 50% off."
+    <nav class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></div>
+                <span class="font-extrabold tracking-tight text-2xl">Morning Light <span class="text-blue-400 font-normal">Solutions</span></span>
+            </div>
+            <div class="flex items-center space-x-8 font-medium text-sm tracking-wide uppercase">
+                <a href="index.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">Home</a>
+                <a href="services.html" class="text-slate-300 hover:text-white transition">Services</a>
+                <a href="contact.html" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-500 transition shadow-xs">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-slate-950 text-white overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+        <div class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10 space-y-6">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-tight text-white drop-shadow-md">
+                Professional I.T. Solutions for Small Businesses
+            </h1>
+            <p class="text-xl text-blue-300 font-medium max-w-2xl mx-auto italic">
+                "Let us build the infrastructure for your success!"
+            </p>
+            <div class="pt-4">
+                <a href="contact.html" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-8 py-3.5 rounded-md border border-zinc-700 uppercase tracking-wider shadow-lg transition inline-block">
+                    Contact Us
+                </a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-16 space-y-20">
+    <section class="bg-zinc-900 text-slate-100 py-12 px-6 border-b border-zinc-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xl md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto text-zinc-300">
+                Slow internet, security risks, and outdated systems don’t just cause headaches— <strong class="text-white font-bold underline decoration-blue-500 decoration-2">they cost you money</strong>. As Hesperia expands into a major industrial hub, your business can’t afford to be offline.
+            </p>
+        </div>
+    </section>
 
-        <section class="space-y-8">
-            <div class="border-b border-slate-200 pb-4">
-                <h2 class="text-2xl font-bold text-slate-900">Managed Service Packages <span class="text-sm font-normal text-slate-500">(The "Recurring Revenue" Model)</span></h2>
-                <p class="text-slate-600 mt-1">Best for businesses with 10+ employees who want predictable monthly costs.</p>
-            </div>
+    <main class="max-w-6xl mx-auto px-6 py-16 flex-grow space-y-16">
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="text-xs font-bold uppercase tracking-wide text-blue-600">Package A</div>
-                        <h3 class="text-xl font-bold text-slate-900">The "Hesperia Starter"</h3>
-                        <p class="text-xs text-slate-500 italic">Target: Small retail, local shops, or professional services.</p>
-                        <div class="text-2xl font-extrabold text-slate-900">$75 – $100 <span class="text-xs font-normal text-slate-500">/ user / month</span></div>
-                        <ul class="space-y-2 text-sm text-slate-600 pt-2 border-t border-slate-100">
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 24/7 Remote Monitoring & Patching</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Basic Antivirus / Anti-Malware</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Remote Help Desk (Mon-Fri, 8am–5pm)</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Monthly Health Report</li>
-                        </ul>
-                    </div>
+        <section class="grid md:grid-cols-5 gap-12 items-start">
+
+            <div class="md:col-span-3 space-y-6">
+                <div class="flex items-center space-x-3 text-blue-600 font-bold uppercase text-xs tracking-widest">
+                    <span>Local High Desert Partner</span>
                 </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-md border-2 border-blue-500 relative flex flex-col justify-between space-y-6">
-                    <span class="absolute -top-3 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
-                    <div class="space-y-4">
-                        <div class="text-xs font-bold uppercase tracking-wide text-blue-600">Package B</div>
-                        <h3 class="text-xl font-bold text-slate-900">The "High Desert Growth"</h3>
-                        <p class="text-xs text-slate-500 italic">Target: Growing medical offices and mid-sized businesses.</p>
-                        <div class="text-2xl font-extrabold text-slate-900">$125 – $175 <span class="text-xs font-normal text-slate-500">/ user / month</span></div>
-                        <ul class="space-y-2 text-sm text-slate-600 pt-2 border-t border-slate-100">
-                            <li class="font-medium text-slate-900"><i class="fa-solid fa-plus text-blue-500 mr-2"></i> Includes Everything in Starter plus:</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Advanced Cybersecurity (MDR)</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Unlimited Remote Support for staff</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Cloud Backup Management (Daily)</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Quarterly Strategy Meetings</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="text-xs font-bold uppercase tracking-wide text-blue-600">Package C</div>
-                        <h3 class="text-xl font-bold text-slate-900">The "Logistics Pro"</h3>
-                        <p class="text-xs text-slate-500 italic">Target: Warehouses, trucking, and 24/7 operations.</p>
-                        <div class="text-2xl font-extrabold text-slate-900">$200 – $250 <span class="text-xs font-normal text-slate-500">/ user / month</span></div>
-                        <ul class="space-y-2 text-sm text-slate-600 pt-2 border-t border-slate-100">
-                            <li class="font-medium text-slate-900"><i class="fa-solid fa-plus text-blue-500 mr-2"></i> Includes Everything in Growth plus:</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 24/7 Emergency Support</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> WiFi Mesh & Scanning Support</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> HIPAA / Compliance Management</li>
-                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Scheduled On-site Support Check-ins</li>
-                        </ul>
-                    </div>
+                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Morning Light Solutions</h2>
+                <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                    <p>
+                        Hi, I’m <strong class="text-slate-950 font-semibold italic">Amanda</strong>, and I help small businesses stop worrying about their technology so they can focus on their growth.
+                    </p>
+                    <p>
+                        With all the new industrial and commercial expansion in the High Desert and its surrounding areas, I specialize in ensuring local companies have the cybersecurity and network speed they need to stay competitive. Whether it’s a full cloud migration or just keeping your office running smoothly, I’m your local I.T. partner.
+                    </p>
+                    <p class="font-medium text-blue-700 bg-blue-50/50 p-4 rounded-xl border border-blue-100 inline-block">
+                        💡 I’d love to offer a free 15-minute 'Tech Health Check' to anyone here today.
+                    </p>
                 </div>
             </div>
-        </section>
 
-        <section class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <div class="inline-block bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Specialized Support</div>
-                <h2 class="text-3xl font-bold">Education Managed Services</h2>
-                <p class="text-slate-300">Comprehensive IT frameworks deployed specifically for school environments, classroom infrastructure, and administration systems.</p>
-                <p class="text-sm font-semibold text-blue-400">Available via Monthly Subscription</p>
-            </div>
-            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-                <ul class="space-y-3 text-sm text-slate-200">
-                    <li><i class="fa-solid fa-laptop text-blue-400 mr-3"></i> 1-to-1 mobile device or Computer environments (Apple, Chrome, Windows, Android, Linux OS)</li>
-                    <li><i class="fa-solid fa-graduation-cap text-blue-400 mr-3"></i> BYOD and school technology support</li>
-                    <li><i class="fa-solid fa-mobile-screen text-blue-400 mr-3"></i> Mobile Device Management (MDM) and Security</li>
-                    <li><i class="fa-solid fa-chalkboard-user text-blue-400 mr-3"></i> Google Classroom Management</li>
-                    <li><i class="fa-solid fa-id-card-clip text-blue-400 mr-3"></i> Google GSuite LDAP Administration</li>
+            <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl border border-slate-200/60 space-y-6">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">Core Capabilities</h3>
+                <h4 class="text-xl font-bold text-slate-900">Our Services</h4>
+
+                <ul class="space-y-4 text-sm text-slate-600">
+                    <li class="flex items-start space-x-3">
+                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                        <span><strong>Managed I.T. Support:</strong> Local help desk—no more 1-800 numbers.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                        <span><strong>Cybersecurity & Data Protection:</strong> Guarding your business against threats.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                        <span><strong>Cloud Migration:</strong> Expert setup for Microsoft 365 and Google Workspace.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                        <span><strong>Warehouse & Office Networking:</strong> Industrial-grade WiFi and mesh systems.</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-3 gap-8 items-start">
-            <div class="space-y-4 md:col-span-1">
-                <h2 class="text-2xl font-bold text-slate-900">Hourly & Project Rates</h2>
-                <p class="text-sm text-slate-500 uppercase tracking-wider font-semibold font-mono">The "Break-Fix" Model</p>
-                <p class="text-slate-600 text-sm leading-relaxed">Best for very small businesses (&lt;5 employees) or standalone, one-time deployment setups.</p>
-
-                <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 space-y-1">
-                    <p class="font-bold"><i class="fa-solid fa-chart-line mr-1"></i> Market Context:</p>
-                    <p>Local freelancers in San Bernardino County typically start at $100, while established firms charge $175+. Setting yourself in the middle makes you accessible but professional.</p>
-                </div>
+        <section class="bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-md grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-2xl font-bold tracking-tight">Why Choose Local?</h3>
+                <p class="text-blue-100 text-sm leading-relaxed">
+                    We live and work right here in the High Desert. We understand the specific needs of Hesperia’s logistics, medical, and retail sectors. When you have a problem, we aren't "remote"—we're right down the street.
+                </p>
             </div>
-
-            <div class="md:col-span-2 grid sm:grid-cols-2 gap-4">
-                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
-                    <div class="text-xs text-slate-400 uppercase tracking-wide">Standard Rate</div>
-                    <div class="text-xl font-bold text-slate-900">$80 – $175 / hour</div>
-                </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 space-y-2">
-                    <div class="text-xs text-red-500 font-bold uppercase tracking-wide">Emergency / After-Hours</div>
-                    <div class="text-xl font-bold text-slate-900">$225 / hour <span class="text-xs font-normal text-slate-500">(2-hour min)</span></div>
-                </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 sm:col-span-2 space-y-3">
-                    <div class="text-xs text-slate-400 uppercase tracking-wide">Project Flat Fee Examples</div>
-                    <div class="space-y-2 text-sm text-slate-700">
-                        <div class="flex justify-between border-b border-slate-100 pb-2">
-                            <span><strong>New Office / Warehouse Set-up:</strong><br><span class="text-xs text-slate-500">Network, 5 workstations, printer, and WiFi mesh.</span></span>
-                            <span class="font-bold text-slate-900 whitespace-nowrap">$1,500 – $3,000</span>
-                        </div>
-                        <div class="flex justify-between pt-1">
-                            <span><strong>Cloud Migration:</strong><br><span class="text-xs text-slate-500">Moving from local files to Microsoft 365 or Google Workspace.</span></span>
-                            <span class="font-bold text-slate-900 whitespace-nowrap">$150 / user</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white/10 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
+                <span class="text-xs uppercase font-bold tracking-wider text-blue-300">Our Strategy</span>
+                <p class="text-xs text-slate-200 italic leading-relaxed">
+                    "Business mentors are key—that’s why when it comes to client selection, we’re choosy. We want to give each of you the time and guidance they deserve. We didn’t get there alone. And neither will you. Call us today."
+                </p>
             </div>
         </section>
-
     </main>
 
     <footer class="bg-slate-950 text-slate-400 py-12 text-sm border-t border-slate-900 text-center space-y-4">
-        <div class="max-w-4xl mx-auto px-4 space-y-2">
-            <p class="font-semibold text-white">Call today: (951) 216-3277 &bull; email: techsupport@lightofthemorning.net</p>
-            <p>&copy; 2026 Morning Light Solutions. All Rights Reserved.</p>
-            <p class="italic text-slate-600 text-xs">2 Samuel 23:4</p>
+        <div class="max-w-4xl mx-auto px-6 space-y-3">
+            <p class="text-base font-bold text-white tracking-wide">
+                Call today: <span class="text-blue-400">(951) 216-3277</span> &bull; Email: <span class="text-blue-400">techsupport@lightofthemorning.net</span>
+            </p>
+            <p class="text-xs text-slate-500 font-medium tracking-wider uppercase">&copy; 2026 Morning Light Solutions. All Rights Reserved.</p>
+            <p class="italic text-slate-600 text-xs pt-2 font-serif">2 Samuel 23:4</p>
         </div>
     </footer>
 
