@@ -1,175 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morning Light Solutions | High Desert IT Support</title>
-    <link rel="icon" type="image/png" href="flavicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Morning Light Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0b63e5;
+            --primary-dark: #084bb0;
+            --ink: #16213a;
+            --paper: #ffffff;
+            --light-bg: #f4f7fb;
+            --amber: #f5a524;
+            --border: #e4e9f2;
+        }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y1ECG9WQR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        * { box-sizing: border-box; }
 
-      gtag('config', 'G-7Y1ECG9WQR');
-    </script>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--ink);
+            line-height: 1.6;
+            background: var(--paper);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Sora', 'Inter', Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .logo span { color: var(--primary-color); }
+
+        nav a {
+            margin-left: 28px;
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        nav a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero {
+            background:
+                linear-gradient(180deg, rgba(11,20,40,0.72), rgba(11,20,40,0.55)),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 130px 20px 110px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 800;
+            margin: 0 0 18px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 600px;
+            margin: 0 auto 34px auto;
+            color: #e8edf7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+        .btn-amber {
+            background: var(--amber);
+            color: #1a1200;
+        }
+        .btn-amber:hover { background: #d98e12; }
+
+        /* Features Section */
+        .features {
+            padding: 90px 20px;
+            background: var(--light-bg);
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-sub {
+            color: #5b6478;
+            max-width: 560px;
+            margin: 0 auto 50px auto;
+            font-size: 16px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            gap: 26px;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 32px 28px;
+            border-radius: 10px;
+            width: 300px;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 19px;
+            color: var(--ink);
+        }
+
+        .feature-card p { color: #5b6478; margin: 0; font-size: 15px; }
+
+        /* Our Sites / Network Section */
+        .sites {
+            padding: 90px 20px 100px;
+            background: var(--ink);
+            text-align: center;
+        }
+
+        .sites h2 {
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .sites .section-sub { color: #aab3c9; }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .site-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #1e2a48;
+            border: 1px solid #2c3b5f;
+            border-radius: 12px;
+            padding: 30px 26px;
+            text-decoration: none;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .site-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .site-card .tag {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--amber);
+            margin-bottom: 10px;
+        }
+
+        .site-card h3 {
+            color: #ffffff;
+            font-size: 22px;
+            margin: 0 0 8px 0;
+        }
+
+        .site-card p {
+            color: #c2cae0;
+            font-size: 14px;
+            margin: 0 0 18px 0;
+        }
+
+        .site-card .visit {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .site-card .visit::after {
+            content: "";
+        }
+
+        .builder-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border: none;
+            padding: 40px 36px;
+        }
+
+        .builder-card h3 { font-size: 26px; }
+        .builder-card p { color: #dfe8fb; font-size: 15px; max-width: 440px; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 28px 20px;
+            background: #0b1428;
+            color: #9aa4bd;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 16px 20px; }
+            nav a { margin-left: 14px; font-size: 14px; }
+            .hero { padding: 90px 20px 80px; }
+            .hero h1 { font-size: 34px; }
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<body>
 
-    <nav class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-3 h-3 bg-amber-400 rounded-full animate-pulse"></div>
-                <span class="font-extrabold tracking-tight text-2xl">Morning Light <span class="text-blue-400 font-normal">Solutions</span></span>
-            </div>
-            <div class="flex items-center space-x-8 font-medium text-sm tracking-wide uppercase">
-                <a href="index.html" class="text-blue-400 border-b-2 border-blue-400 pb-1">Home</a>
-                <a href="services.html" class="text-slate-300 hover:text-white transition">Services</a>
-                <a href="projects.html" class="text-slate-300 hover:text-white transition">Projects</a>
-                <a href="web.html" class="text-slate-300 hover:text-white transition">Websites</a>
-                <a href="contact.html" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-500 transition shadow-xs">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="relative bg-slate-950 text-white overflow-hidden border-b border-slate-800">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-
-        <div class="max-w-4xl mx-auto px-6 py-20 text-center relative z-10 space-y-6">
-            <h1 class="text-4xl md:text-5xl font-black tracking-tight uppercase leading-tight text-white drop-shadow-md">
-                Professional I.T. & Web Solutions for Small Businesses
-            </h1>
-            <p class="text-xl text-blue-300 font-medium max-w-2xl mx-auto italic">
-                "Let us build the infrastructure for your success!"
-            </p>
-            <div class="pt-4">
-                <a href="contact.html" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-8 py-3.5 rounded-md border border-zinc-700 uppercase tracking-wider shadow-lg transition inline-block">
-                    Contact Us
-                </a>
-            </div>
-        </div>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">Morning Light <span>Solutions</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <section class="bg-zinc-900 text-slate-100 py-12 px-6 border-b border-zinc-800">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-xl md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto text-zinc-300">
-                Slow internet, security risks, and outdated systems don’t just cause headaches— <strong class="text-white font-bold underline decoration-blue-500 decoration-2">they cost you money</strong>. As Hesperia expands into a major industrial hub, your business can’t afford to be offline.
-            </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Build Your Website Easily</h1>
+        <p>Professional, responsive, and tailored web and IT solutions for your local community and business needs.</p>
+        <a href="contact.html" class="btn">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us</h2>
+        <p class="section-sub">Straightforward web and IT support, built around what local businesses actually need.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Modern Design</h3>
+                <p>Clean, mobile-responsive layouts built to look professional on any device or screen size.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast & Reliable</h3>
+                <p>Optimized code structures ensuring quick load times and seamless user experiences.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Local Focus</h3>
+                <p>Designed specifically to highlight local business offerings, services, and community projects.</p>
+            </div>
         </div>
     </section>
 
-    <main class="max-w-6xl mx-auto px-6 py-16 flex-grow space-y-16">
+    <!-- Our Sites / Network Section -->
+    <section class="sites">
+        <h2>Explore Our Network</h2>
+        <p class="section-sub">Client sites, tools, and apps built and hosted by Morning Light Solutions.</p>
+        <div class="sites-grid">
 
-        <section class="grid md:grid-cols-5 gap-12 items-start">
-
-            <div class="md:col-span-3 space-y-6">
-                <div class="flex items-center space-x-3 text-blue-600 font-bold uppercase text-xs tracking-widest">
-                    <span>Local High Desert Partner</span>
-                </div>
-                <h2 class="text-3xl font-black text-slate-900 tracking-tight">Morning Light Solutions</h2>
-                <div class="space-y-4 text-slate-600 leading-relaxed text-base">
-                    <p>
-                        Hi, I’m <strong class="text-slate-950 font-semibold italic">Amanda</strong>, and I help small businesses stop worrying about their technology so they can focus on their growth.
-                    </p>
-                    <p>
-                        With all the new industrial and commercial expansion in the High Desert and its surrounding areas, I specialize in ensuring local companies have the cybersecurity, network speed, and custom web applications they need to stay competitive. Whether it's building a professional online presence from $25, full cloud migration, or keeping your office running smoothly, I’m your local I.T. partner.
-                    </p>
-                    <p class="font-medium text-blue-700 bg-blue-50/50 p-4 rounded-xl border border-blue-100 inline-block">
-                        💡 I’d love to offer a free 15-minute 'Tech Health Check' to anyone here today.
-                    </p>
-                </div>
-            </div>
-
-            <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl border border-slate-200/60 space-y-6">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">Core Capabilities</h3>
-                <h4 class="text-xl font-bold text-slate-900">Our Services</h4>
-
-                <ul class="space-y-4 text-sm text-slate-600">
-                    <li class="flex items-start space-x-3">
-                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
-                        <span><strong>Website Building & Web Apps:</strong> Professional web solutions starting as low as $25.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
-                        <span><strong>Managed I.T. Support:</strong> Local help desk—no more 1-800 numbers.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
-                        <span><strong>Cybersecurity & Data Protection:</strong> Guarding your business against threats.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
-                        <span><strong>Cloud Migration:</strong> Expert setup for Microsoft 365 and Google Workspace.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <span class="text-blue-500 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
-                        <span><strong>Warehouse & Office Networking:</strong> Industrial-grade WiFi and mesh systems.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Featured Web App & Website Tiers Highlight -->
-        <section class="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-sm space-y-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-100 pb-6">
+            <a class="site-card builder-card" href="https://web.morninglightsolutions.com" target="_blank" rel="noopener">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Business Launch Solutions</span>
-                    <h3 class="text-2xl font-bold text-slate-900 mt-1">Website Building & Custom Web Apps</h3>
+                    <div class="tag">Free Tool</div>
+                    <h3>Site Builder App</h3>
+                    <p>Want to build your own site? Get started today with a free subdomain hosted by Morning Light Solutions.</p>
                 </div>
-                <a href="services.html" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition shadow-sm">View All Pricing & Tiers &rarr;</a>
-            </div>
+                <span class="visit">Launch Site Builder →</span>
+            </a>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                    <div class="text-xs font-bold text-blue-600 uppercase">Tier 1</div>
-                    <h4 class="text-lg font-bold text-slate-900">Landing Page Starter</h4>
-                    <div class="text-xl font-black text-slate-900">From $25</div>
-                    <p class="text-xs text-slate-600 leading-relaxed">Responsive single-page layout with fast Tailwind CSS styling and contact form integration.</p>
+            <a class="site-card" href="https://systems.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Newest</div>
+                    <h3>Systems</h3>
+                    <p>IT systems dashboard and tools.</p>
                 </div>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                    <div class="text-xs font-bold text-blue-600 uppercase">Tier 2</div>
-                    <h4 class="text-lg font-bold text-slate-900">Business Web Site</h4>
-                    <div class="text-xl font-black text-slate-900">$150 – $400</div>
-                    <p class="text-xs text-slate-600 leading-relaxed">Multi-page professional site optimized for mobile with easy content management updates.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                    <div class="text-xs font-bold text-blue-600 uppercase">Tier 3</div>
-                    <h4 class="text-lg font-bold text-slate-900">Custom Business Web App</h4>
-                    <div class="text-xl font-black text-slate-900">$500+</div>
-                    <p class="text-xs text-slate-600 leading-relaxed">Custom dashboards, database architecture, API integrations, and secure role-based logins.</p>
-                </div>
-            </div>
-        </section>
+                <span class="visit">Visit site →</span>
+            </a>
 
-        <section class="bg-gradient-to-r from-blue-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-md grid md:grid-cols-3 gap-8">
-            <div class="md:col-span-2 space-y-4">
-                <h3 class="text-2xl font-bold tracking-tight">Why Choose Local?</h3>
-                <p class="text-blue-100 text-sm leading-relaxed">
-                    We live and work right here in the High Desert. We understand the specific needs of Hesperia’s logistics, medical, and retail sectors. When you have a problem, we aren't "remote"—we're right down the street.
-                </p>
-            </div>
-            <div class="bg-white/10 p-6 rounded-xl border border-white/10 flex flex-col justify-between space-y-4">
-                <span class="text-xs uppercase font-bold tracking-wider text-blue-300">Our Strategy</span>
-                <p class="text-xs text-slate-200 italic leading-relaxed">
-                    "Business mentors are key—that’s why when it comes to client selection, we’re choosy. We want to give each of you the time and guidance they deserve. We didn’t get there alone. And neither will you. Call us today."
-                </p>
-            </div>
-        </section>
-    </main>
+            <a class="site-card" href="https://comptia.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Newest</div>
+                    <h3>CompTIA</h3>
+                    <p>CompTIA resources and training hub.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
 
-    <footer class="bg-slate-950 text-slate-400 py-12 text-sm border-t border-slate-900 text-center space-y-4">
-        <div class="max-w-4xl mx-auto px-6 space-y-3">
-            <p class="text-base font-bold text-white tracking-wide">
-                Call today: <span class="text-blue-400">(951) 216-3277</span> &bull; Email: <span class="text-blue-400">techsupport@morninglightsolutions.com</span>
-            </p>
-            <p class="text-xs text-slate-500 font-medium tracking-wider uppercase">&copy; 2026 Morning Light Solutions. All Rights Reserved.</p>
-            <p class="italic text-slate-600 text-xs pt-2 font-serif">2 Samuel 23:4</p>
+            <a class="site-card" href="https://rental.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Newest</div>
+                    <h3>Rental</h3>
+                    <p>Rental services and listings.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
+
+            <a class="site-card" href="https://dash.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Client Site</div>
+                    <h3>Mountain Dash</h3>
+                    <p>Client project — Mountain Dash.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
+
+            <a class="site-card" href="https://detail.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Client Site</div>
+                    <h3>Detail View</h3>
+                    <p>Client project — Detail View.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
+
+            <a class="site-card" href="https://example2.morninglightsolutions.com" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Example</div>
+                    <h3>Example Site 2</h3>
+                    <p>Portfolio example build.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
+
+            <a class="site-card" href="http://example1.morninglightsolutions.com/" target="_blank" rel="noopener">
+                <div>
+                    <div class="tag">Example</div>
+                    <h3>Example Site 1</h3>
+                    <p>Portfolio example build.</p>
+                </div>
+                <span class="visit">Visit site →</span>
+            </a>
+
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Morning Light Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Morning Light Solutions. All rights reserved.</p>
     </footer>
 
 </body>
