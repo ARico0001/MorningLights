@@ -233,6 +233,108 @@
         .builder-card h3 { font-size: 26px; }
         .builder-card p { color: #dfe8fb; font-size: 15px; max-width: 440px; }
 
+        /* Additional Business Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-section,
+        .founder-section,
+        .tech-section {
+            padding: 90px 20px;
+        }
+
+        .about-section {
+            background: var(--paper);
+        }
+
+        .founder-section {
+            background: var(--light-bg);
+        }
+
+        .about-section h2,
+        .founder-section h2,
+        .services-section h2,
+        .tech-section h2 {
+            font-size: 34px;
+            margin: 0 0 24px;
+            text-align: center;
+        }
+
+        .about-section p,
+        .founder-section p {
+            max-width: 760px;
+            margin: 0 auto 18px;
+            color: #5b6478;
+        }
+
+        .services-section {
+            padding: 90px 20px 100px;
+            background: var(--ink);
+            text-align: center;
+        }
+
+        .services-section h2 {
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #1e2a48;
+            border: 1px solid #2c3b5f;
+            border-radius: 12px;
+            padding: 30px 26px;
+            text-align: left;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .service-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .service-card p {
+            color: #c2cae0;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .tech-section {
+            background: var(--paper);
+            text-align: center;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+
+        .tech-grid span {
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -247,6 +349,14 @@
             nav a { margin-left: 14px; font-size: 14px; }
             .hero { padding: 90px 20px 80px; }
             .hero h1 { font-size: 34px; }
+            .about-section,
+            .founder-section,
+            .tech-section,
+            .services-section { padding: 70px 20px; }
+            .about-section h2,
+            .founder-section h2,
+            .services-section h2,
+            .tech-section h2 { font-size: 28px; }
         }
     </style>
 </head>
@@ -359,7 +469,7 @@
                 <span class="visit">Visit site →</span>
             </a>
 
-            <a class="site-card" href="http://example1.morninglightsolutions.com/" target="_blank" rel="noopener">
+            <a class="site-card" href="https://example1.morninglightsolutions.com/" target="_blank" rel="noopener">
                 <div>
                     <div class="tag">Example</div>
                     <h3>Example Site 1</h3>
@@ -371,13 +481,134 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Morning Light Solutions. All rights reserved.</p>
-    </footer>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Morning Light Solutions</h2>
 
-</body>
-</html>
+            <p>
+                At Morning Light Solutions, we believe technology should simplify your work,
+                not complicate it. Our mission is to provide practical, dependable technology
+                solutions that help clients succeed in an increasingly connected world.
+            </p>
+
+            <p>
+                We specialize in website development, cloud technologies, technical support,
+                project management systems, and business technology solutions. Whether you
+                need a professional website, assistance with cloud infrastructure, or help
+                organizing workflows and processes, we focus on delivering solutions that
+                are effective, scalable, and easy to maintain.
+            </p>
+
+            <p>
+                Our approach is simple: understand your needs, communicate clearly,
+                and deliver technology solutions that create measurable value.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>What We Do</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Website Development</h3>
+                    <p>
+                        Modern, responsive websites designed to help businesses establish
+                        a professional online presence and connect with customers.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>IT Support</h3>
+                    <p>
+                        Technical troubleshooting, system support, and technology guidance
+                        to keep your business operating efficiently.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Cloud Solutions</h3>
+                    <p>
+                        Assistance with Microsoft Azure, cloud infrastructure,
+                        deployments, and digital transformation initiatives.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Project Management</h3>
+                    <p>
+                        Workflow organization, Kanban systems, Jira administration,
+                        and process improvement solutions for teams of all sizes.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Data & Reporting</h3>
+                    <p>
+                        Business intelligence, reporting, and dashboard solutions using
+                        modern analytics tools and best practices.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Technology Consulting</h3>
+                    <p>
+                        Strategic guidance to help individuals and organizations make
+                        informed technology decisions and investments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder" class="founder-section">
+        <div class="container">
+            <h2>Meet the Founder</h2>
+
+            <p>
+                Morning Light Solutions was founded by Amanda, an IT professional with
+                experience in technical support, web development, cloud technologies,
+                project management, and business solutions.
+            </p>
+
+            <p>
+                Through hands-on work with Microsoft Azure, ASP.NET Core, SQL databases,
+                Jira project management systems, and modern web technologies, Amanda has
+                developed a strong foundation for helping clients solve real-world
+                technology challenges.
+            </p>
+
+            <p>
+                Driven by continuous learning and a passion for helping others succeed,
+                she combines technical expertise with clear communication and a practical,
+                customer-focused approach to problem solving.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technologies" class="tech-section">
+        <div class="container">
+            <h2>Technologies & Platforms</h2>
+
+            <div class="tech-grid">
+                <span>Microsoft Azure</span>
+                <span>ASP.NET Core MVC</span>
+                <span>SQL Server</span>
+                <span>Power BI</span>
+                <span>Jira</span>
+                <span>Microsoft 365</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Git & GitHub</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
